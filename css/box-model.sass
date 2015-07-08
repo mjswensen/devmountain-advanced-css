@@ -1,0 +1,38 @@
+---
+---
+
+.box-model
+  $border-color: hsla(0, 0%, 0%, 0.75)
+  div
+    padding: 30px
+    position: relative
+    &::after
+      position: absolute
+      top: 0
+      right: 0
+      display: inline-block
+      opacity: 0.75
+      font-size: 0.5em
+      padding: 0 0.4em
+    &.margin
+      background-color: #F9CC9D
+      border: 2px dashed $border-color
+      &::after
+        content: "margin"
+    &.border
+      background-color: #FDDC9A
+      border: 2px solid $border-color
+      &::after
+        content: "border"
+    &.padding
+      background-color: #C2CE89
+      border: 2px dashed $border-color
+      &::after
+        content: "padding"
+    &.content
+      padding: 0
+      border: 2px solid $border-color
+      background-color: #8CB5C0
+      text-align: left
+      &::after
+        content: "content"

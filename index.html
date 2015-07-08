@@ -35,6 +35,9 @@
     <script src="{{ site.baseurl }}/lib/js/html5shiv.js"></script>
     <![endif]-->
 
+    <!-- Presentation-specific styles -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/box-model.css">
+
   </head>
   <body>
     <div class="reveal">
@@ -47,7 +50,6 @@
           <h2>Agenda</h2>
           <ul>
             <li>HTML5 elements</li>
-            <li>HTML5 attributes</li>
             <li>The box model</li>
             <li>Pseudo classes</li>
             <li>Pseudo elements</li>
@@ -56,6 +58,7 @@
           </ul>
           <p class="fragment">We'll also talk about some tools available to us for developing and debugging CSS.</p>
         </section>
+
         <section>
           <section>
             <h2>HTML5 Elements</h2>
@@ -82,6 +85,50 @@
             <p><a href="http://html5doctor.com/element-index/">html5doctor.com/element-index/</a> has a nice reference of available tags.</p>
           </section>
         </section>
+
+        <section>
+          <section>
+            <h2>The Box Model</h2>
+          </section>
+          <section>
+            <p>The responsibility of a web browser's rendering engine is to determine the size, properties, and position of rectangular boxes (elements). [<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box_model">MDN article on the box model.</a>]</p>
+          </section>
+          <section>
+            <p>The box model outlines how these rectangles are sized and positioned.</p>
+          </section>
+          <section>
+            <p>For a given element, like <code>&lt;p&gt;My paragraph&lt;/p&gt;</code>:</p>
+            <div class="box-model">
+              <div class="margin">
+                <div class="border">
+                  <div class="padding">
+                    <div class="content">My paragraph</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <aside class="notes">All of these things contribute to the size and positioning of an element.</aside>
+          </section>
+          <section>
+            <p>Ocassionaly the box model can be tricky when you are trying to give a value to the <code>width</code> property.</p>
+          </section>
+          <section>
+            <p>Use the <code>box-sizing</code> property to get around that.</p>
+            <div data-height="257" data-theme-id="12278" data-slug-hash="MYVwzR" data-default-tab="html" data-user="mjswensen" class='codepen'>
+              <p>See the Pen <a href='http://codepen.io/mjswensen/pen/MYVwzR/'>CSS Power-ups - Examples - box-sizing</a> by Matt Swensen (<a href='http://codepen.io/mjswensen'>@mjswensen</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+            </div>
+          </section>
+          <section>
+            <h3>Mini Project</h3>
+            <ol>
+              <li>Create a parent element with a width of 200 pixels.</li>
+              <li>Give it some padding and a border.</li>
+              <li>Create a child element, also with some padding and a border.</li>
+              <li>Set the width of the child to 100% (if it isn't already), and use <code>box-sizing: border-box;</code> to make sure it fits right.</li>
+            </ol>
+          </section>
+        </section>
+
       </div>
     </div>
 
@@ -108,5 +155,8 @@
       });
 
     </script>
+
+    <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
   </body>
 </html>
