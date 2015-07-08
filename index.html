@@ -1,0 +1,86 @@
+---
+---
+
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Advanced CSS • DevMountain</title>
+
+    <meta name="description" content="CSS topics for the DevMountain code school.">
+    <meta name="author" content="Matt Swensen">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/lib/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/lib/reveal.js/css/theme/white.css" id="theme">
+
+    <!-- TODO: this may not be needed. -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/lib/reveal.js/lib/css/zenburn.css">
+
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? '{{ site.baseurl }}/lib/reveal.js/css/print/pdf.css' : '{{ site.baseurl }}/lib/reveal.js/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="{{ site.baseurl }}/lib/js/html5shiv.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Advanced CSS</h1>
+          <p>DevMountain • 9 July 2015</p>
+        </section>
+        <section>
+          <h2>Agenda</h2>
+          <ul>
+            <li>HTML5 elements</li>
+            <li>HTML5 attributes</li>
+            <li>The box model</li>
+            <li>Pseudo classes</li>
+            <li>Pseudo elements</li>
+            <li>Media queries</li>
+            <li>Intro to layout (floats)</li>
+          </ul>
+          <p class="fragment">We'll also talk about some tools available to us for developing and debugging CSS.</p>
+        </section>
+      </div>
+    </div>
+
+    <script src="{{ site.baseurl }}/lib/reveal.js/lib/js/head.min.js"></script>
+    <script src="{{ site.baseurl }}/lib/reveal.js/js/reveal.js"></script>
+
+    <script>
+
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide',
+
+        // TODO: some of these may not be needed.
+        dependencies: [
+          { src: '{{ site.baseurl }}/lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '{{ site.baseurl }}/lib/reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '{{ site.baseurl }}/lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: '{{ site.baseurl }}/lib/reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+
+    </script>
+  </body>
+</html>
