@@ -51,8 +51,8 @@
           <ul>
             <li>HTML5 elements</li>
             <li>The box model</li>
-            <li>Pseudo classes</li>
-            <li>Pseudo elements</li>
+            <li>Pseudo-classes</li>
+            <li>Pseudo-elements</li>
             <li>Media queries</li>
             <li>Intro to layout (floats)</li>
           </ul>
@@ -69,13 +69,13 @@
           </section>
           <section>
             <p>Not semantic:</p>
-            <pre><code data-trim>
+            <pre><code class="html" data-trim>
               &lt;div&gt;&NewLine;  &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&NewLine;  &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&NewLine;  &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&NewLine;&lt;/div&gt;&NewLine;&lt;div&gt;&NewLine;  &lt;div&gt;&NewLine;    &lt;div&gt;Some heading&lt;/div&gt;&NewLine;  &lt;/div&gt;&NewLine;  &lt;div&gt;&NewLine;    &lt;div&gt;Some content&lt;/div&gt;&NewLine;  &lt;/div&gt;&NewLine;  &lt;div&gt;Some more content&lt;/div&gt;&NewLine;  &lt;div&gt;Some tangential content&lt;/div&gt;&NewLine;&lt;/div&gt;
             </code></pre>
           </section>
           <section>
             <p>Semantic:</p>
-            <pre><code data-trim>
+            <pre><code class="html" data-trim>
               &lt;nav&gt;&NewLine;  &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&NewLine;  &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&NewLine;  &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&NewLine;&lt;/nav&gt;&NewLine;&lt;article&gt;&NewLine;  &lt;header&gt;&NewLine;    &lt;h1&gt;Some heading&lt;/h1&gt;&NewLine;  &lt;/header&gt;&NewLine;  &lt;section&gt;&NewLine;    &lt;p&gt;Some content&lt;/p&gt;&NewLine;  &lt;/section&gt;&NewLine;  &lt;footer&gt;Some more content&lt;/footer&gt;&NewLine;  &lt;aside&gt;Some tangential content&lt;/aside&gt;&NewLine;&lt;/article&gt;
             </code></pre>
           </section>
@@ -126,6 +126,70 @@
               <li>Create a child element, also with some padding and a border.</li>
               <li>Set the width of the child to 100% (if it isn't already), and use <code>box-sizing: border-box;</code> to make sure it fits right.</li>
             </ol>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Pseudo-classes</h2>
+          </section>
+          <section>
+            <p>Pseudo-classes give you more control over which elements your CSS selectors are targeting.</p>
+            <p class="fragment">Use them in tandem with type and class selectors.</p>
+          </section>
+          <section>
+            <p>For example, to emphasize the first item in a list:</p>
+            <pre><code class="html" data-trim>
+              &lt;ol&gt;&NewLine;  &lt;li&gt;Trucks&lt;/li&gt;&NewLine;  &lt;li&gt;Cars&lt;/li&gt;&NewLine;  &lt;li&gt;Motorcycles&lt;/li&gt;&NewLine;&lt;/ol&gt;
+            </code></pre>
+            <pre><code class="css" data-trim>
+              li:first-child {&NewLine;  font-weight: bold;&NewLine;}
+            </code></pre>
+            <aside class="notes">The nice thing about this approach (as opposed to adding a class to the first list item) is that we can re-order the elements in the list (in the HTML) and the first one will always be the one that is bolded.</aside>
+          </section>
+          <section>
+            <table class="small">
+              <thead>
+                <tr>
+                  <th>CSS</th>
+                  <th>English</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>:first-child</code></td>
+                  <td>Elements that are the first child of their parent</td>
+                </tr>
+                <tr>
+                  <td><code>:last-child</code></td>
+                  <td>Elements that are the last child of their parent</td>
+                </tr>
+                <tr>
+                  <td><code>:nth-child(3)</code></td>
+                  <td>Elements that are the third child of their parent</td>
+                </tr>
+                <tr>
+                  <td><code>:hover</code></td>
+                  <td>Elements that are currently under the mouse cursor</td>
+                </tr>
+                <tr>
+                  <td><code>:active</code></td>
+                  <td>Elements that are currently being clicked</td>
+                </tr>
+                <tr>
+                  <td><code>:empty</code></td>
+                  <td>Elements that have no children or text</td>
+                </tr>
+                <tr>
+                  <td><code>:not(.summary)</code></td>
+                  <td>Elements that do not have the <code>summary</code> class</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section>
+            <h3>Mini Project</h3>
+            <p>Fun selector game at <a href="http://flukeout.github.io/">flukeout.github.io</a>!</p>
           </section>
         </section>
 
