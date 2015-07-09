@@ -114,7 +114,7 @@
           </section>
           <section>
             <p>Use the <code>box-sizing</code> property to get around that.</p>
-            <div data-height="257" data-theme-id="12278" data-slug-hash="MYVwzR" data-default-tab="html" data-user="mjswensen" class='codepen'>
+            <div data-height="257" data-theme-id="12278" data-slug-hash="MYVwzR" data-default-tab="html" data-user="mjswensen" class="codepen">
               <p>See the Pen <a href='http://codepen.io/mjswensen/pen/MYVwzR/'>CSS Power-ups - Examples - box-sizing</a> by Matt Swensen (<a href='http://codepen.io/mjswensen'>@mjswensen</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
             </div>
           </section>
@@ -190,6 +190,54 @@
           <section>
             <h3>Mini Project</h3>
             <p>Fun selector game at <a href="http://flukeout.github.io/">flukeout.github.io</a>!</p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Pseudo-elements</h2>
+          </section>
+          <section>
+            <p>Pseudo-elements allow you to adjust your markup from your stylesheet.</p>
+          </section>
+          <section>
+            <p>For example, you can insert extra elements into the document:</p>
+            <div data-height="257" data-theme-id="12278" data-slug-hash="BNxNPM" data-default-tab="html" data-user="mjswensen" class="codepen">
+              <p>See the Pen <a href='http://codepen.io/mjswensen/pen/BNxNPM/'>Pseudo-elements example</a> by Matt Swensen (<a href='http://codepen.io/mjswensen'>@mjswensen</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+            </div>
+          </section>
+          <section>
+            <p>These are the types of pseudo-elements:</p>
+            <ul class="plain">
+              <li><code>::before</code></li>
+              <li><code>::after</code></li>
+              <li><code>::first-letter</code></li>
+              <li><code>::first-line</code></li>
+              <li><code>::selection</code></li>
+              <li><code>::backdrop</code></li>
+            </ul>
+            <aside class="notes">
+              ::before and ::after are somewhat misleading. The CSS Power-ups homepage has an example of ::selection. ::backdrop might be used for modal overlays in the future.
+            </aside>
+          </section>
+          <section>
+            <p>Pseudo-elements should only be used for style/design, not for adding important content.</p>
+            <img src="{{ site.baseurl }}/img/uncle-ben.gif" alt="With great power comes great responsibility.">
+          </section>
+          <section>
+            <h3>Mini Project</h3>
+            <p>Given this HTML:</p>
+            <pre><code class="html" data-trim>
+              &lt;h3&gt;Table of Contents&lt;/h3&gt;
+            </code></pre>
+            <p>Reproduce this screenshot:</p>
+            <img src="{{ site.baseurl }}/img/pseudo-elements.png" alt="Website title with styled pseudo-elements.">
+          </section>
+          <section>
+            <p>Here's one way to do it:</p>
+            <pre><code class="css" data-trim>
+              h3::before, h3::after {&NewLine;  content: &quot;//&quot;;&NewLine;  padding: 0 1ex;&NewLine;  color: hsla(0, 0%, 0%, 0.5);&NewLine;}
+            </code></pre>
           </section>
         </section>
 
