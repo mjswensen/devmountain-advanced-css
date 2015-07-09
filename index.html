@@ -241,6 +241,35 @@
           </section>
         </section>
 
+        <section>
+          <section>
+            <h2>Media Queries</h2>
+          </section>
+          <section>
+            <p>Media queries let us define CSS rules that will only apply when certain conditions are met.</p>
+            <p class="fragment">A common use case is detecting screen width, changing layout as appropriate.</p>
+            <aside class="notes">
+              Recall the definition a CSS rule: a selector accompanied by a set of properties and values.
+            </aside>
+          </section>
+          <section>
+            <p>See <a href="http://codepen.io/mjswensen/pen/OPEwZQ">this simple media query example.</a></p>
+          </section>
+          <section>
+            <p>There are other useful media queries:</p>
+            <pre class="fragment"><code class="css" data-trim>
+              @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {&NewLine;  /* Detecting screen resolution to provide high-DPI&NewLine;   * images for retina screens or high-quality prints.&NewLine;   */&NewLine;}
+            </code></pre>
+            <pre class="fragment"><code class="css" data-trim>
+              @media print {&NewLine;  /* Print-specific CSS for doing things like removing&NewLine;   * background colors, making content full-width, etc.&NewLine;   */&NewLine;}&NewLine;
+            </code></pre>
+          </section>
+          <section>
+            <h3>Mini Project</h3>
+            <p>Create an element that has a blue background color when the window is larger than 500 pixels wide, and a red background color otherwise.</p>
+          </section>
+        </section>
+
       </div>
     </div>
 
