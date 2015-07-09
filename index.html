@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="{{ site.baseurl }}/lib/reveal.js/css/reveal.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/lib/reveal.js/css/theme/custom.css" id="theme">
 
-    <!-- TODO: this may not be needed. -->
     <link rel="stylesheet" href="{{ site.baseurl }}/lib/reveal.js/lib/css/zenburn.css">
 
     <script>
@@ -290,11 +289,9 @@
 
         transition: 'slide',
 
-        // TODO: some of these may not be needed.
         dependencies: [
           { src: '{{ site.baseurl }}/lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
           { src: '{{ site.baseurl }}/lib/reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-          { src: '{{ site.baseurl }}/lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
           { src: '{{ site.baseurl }}/lib/reveal.js/plugin/notes/notes.js', async: true }
         ]
       });
